@@ -95,6 +95,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="version2_models_sharePermission.SharePermission.html#project" class="tsd-kind-icon">project</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="version2_models_sharePermission.SharePermission.html#role" class="tsd-kind-icon">role</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="version2_models_sharePermission.SharePermission.html#type" class="tsd-kind-icon">type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="version2_models_sharePermission.SharePermission.html#user" class="tsd-kind-icon">user</a></li>
 							</ul>
 						</section>
 					</div>
@@ -108,7 +109,7 @@
 					<div class="tsd-signature tsd-kind-icon">group<span class="tsd-signature-symbol">:</span> <a href="version2_models_groupName.GroupName.html" class="tsd-signature-type" data-tsd-kind="Interface">GroupName</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/92c15ecf/src/version2/models/sharePermission.ts#L23">version2/models/sharePermission.ts:23</a></li>
+							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/29c7b3f7/src/version2/models/sharePermission.ts#L24">version2/models/sharePermission.ts:24</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -118,7 +119,7 @@
 					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/92c15ecf/src/version2/models/sharePermission.ts#L8">version2/models/sharePermission.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/29c7b3f7/src/version2/models/sharePermission.ts#L9">version2/models/sharePermission.ts:9</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -133,7 +134,7 @@
 					<div class="tsd-signature tsd-kind-icon">project<span class="tsd-signature-symbol">:</span> <a href="version2_models_project.Project.html" class="tsd-signature-type" data-tsd-kind="Interface">Project</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/92c15ecf/src/version2/models/sharePermission.ts#L21">version2/models/sharePermission.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/29c7b3f7/src/version2/models/sharePermission.ts#L22">version2/models/sharePermission.ts:22</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -143,7 +144,7 @@
 					<div class="tsd-signature tsd-kind-icon">role<span class="tsd-signature-symbol">:</span> <a href="version2_models_projectRole.ProjectRole.html" class="tsd-signature-type" data-tsd-kind="Interface">ProjectRole</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/92c15ecf/src/version2/models/sharePermission.ts#L22">version2/models/sharePermission.ts:22</a></li>
+							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/29c7b3f7/src/version2/models/sharePermission.ts#L23">version2/models/sharePermission.ts:23</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -153,21 +154,33 @@
 					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/92c15ecf/src/version2/models/sharePermission.ts#L20">version2/models/sharePermission.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/29c7b3f7/src/version2/models/sharePermission.ts#L21">version2/models/sharePermission.ts:21</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The type of share permission:</p>
 						</div>
-						<p><code>group</code> Shared with a group. If set in a request, then specify <code>sharePermission.group</code> as well. <code>project</code> Shared
-							with a project. If set in a request, then specify <code>sharePermission.project</code> as well. <code>projectRole</code> Share with a
-							project role in a project. This value is not returned in responses. It is used in requests, where it needs to be
-							specify with <code>projectId</code> and <code>projectRoleId</code>. <code>global</code> Shared globally. If set in a request, no other
-							<code>sharePermission</code> properties need to be specified. <code>loggedin</code> Shared with all logged-in users. Note: This value is
-							set in a request by specifying <code>authenticated</code> as the <code>type</code>. <code>project-unknown</code> Shared with a project that the user
-						does not have access to. Cannot be set in a request.</p>
+						<ul>
+							<li><code>user</code> Shared with a user. -<code>group</code> Shared with a group. If set in a request, then specify <code>sharePermission.group</code> as well.</li>
+							<li><code>project</code> Shared with a project. If set in a request, then specify <code>sharePermission.project</code> as well.</li>
+							<li><code>projectRole</code> Share with a project role in a project. This value is not returned in responses. It is used in
+							requests, where it needs to be specify with <code>projectId</code> and <code>projectRoleId</code>.</li>
+							<li><code>global</code> Shared globally. If set in a request, no other <code>sharePermission</code> properties need to be specified.</li>
+							<li><code>loggedin</code> Shared with all logged-in users. Note: This value is set in a request by specifying <code>authenticated</code> as
+							the <code>type</code>. -<code>project-unknown</code> Shared with a project that the user does not have access to. Cannot be set in a request.</li>
+						</ul>
 					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="user" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> user</h3>
+					<div class="tsd-signature tsd-kind-icon">user<span class="tsd-signature-symbol">:</span> <a href="version2_models_user.User.html" class="tsd-signature-type" data-tsd-kind="Interface">User</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/29c7b3f7/src/version2/models/sharePermission.ts#L25">version2/models/sharePermission.ts:25</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 		</div>
@@ -203,6 +216,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="version2_models_sharePermission.SharePermission.html#type" class="tsd-kind-icon">type</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="version2_models_sharePermission.SharePermission.html#user" class="tsd-kind-icon">user</a>
 							</li>
 						</ul>
 					</li>

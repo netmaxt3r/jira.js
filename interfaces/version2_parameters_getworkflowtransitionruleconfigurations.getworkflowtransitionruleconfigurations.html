@@ -83,11 +83,14 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="version2_parameters_getWorkflowTransitionRuleConfigurations.GetWorkflowTransitionRuleConfigurations.html#draft" class="tsd-kind-icon">draft</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="version2_parameters_getWorkflowTransitionRuleConfigurations.GetWorkflowTransitionRuleConfigurations.html#expand" class="tsd-kind-icon">expand</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="version2_parameters_getWorkflowTransitionRuleConfigurations.GetWorkflowTransitionRuleConfigurations.html#keys" class="tsd-kind-icon">keys</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="version2_parameters_getWorkflowTransitionRuleConfigurations.GetWorkflowTransitionRuleConfigurations.html#maxResults" class="tsd-kind-icon">max<wbr>Results</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="version2_parameters_getWorkflowTransitionRuleConfigurations.GetWorkflowTransitionRuleConfigurations.html#startAt" class="tsd-kind-icon">start<wbr>At</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="version2_parameters_getWorkflowTransitionRuleConfigurations.GetWorkflowTransitionRuleConfigurations.html#types" class="tsd-kind-icon">types</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="version2_parameters_getWorkflowTransitionRuleConfigurations.GetWorkflowTransitionRuleConfigurations.html#withTags" class="tsd-kind-icon">with<wbr>Tags</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="version2_parameters_getWorkflowTransitionRuleConfigurations.GetWorkflowTransitionRuleConfigurations.html#workflowNames" class="tsd-kind-icon">workflow<wbr>Names</a></li>
 							</ul>
 						</section>
 					</div>
@@ -96,18 +99,34 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="draft" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> draft</h3>
+					<div class="tsd-signature tsd-kind-icon">draft<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/29c7b3f7/src/version2/parameters/getWorkflowTransitionRuleConfigurations.ts#L15">version2/parameters/getWorkflowTransitionRuleConfigurations.ts:15</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>EXPERIMENTAL: Whether draft or published workflows are returned. If not provided, both workflow types are returned.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="expand" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> expand</h3>
 					<div class="tsd-signature tsd-kind-icon">expand<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/92c15ecf/src/version2/parameters/getWorkflowTransitionRuleConfigurations.ts#L14">version2/parameters/getWorkflowTransitionRuleConfigurations.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/29c7b3f7/src/version2/parameters/getWorkflowTransitionRuleConfigurations.ts#L21">version2/parameters/getWorkflowTransitionRuleConfigurations.ts:21</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Use <a href="#expansion">expand</a> to include additional information in the response. This parameter accepts <code>transition</code>,
-							which, for each rule, returns information about the transition the rule is assigned to.</p>
+							<p>Use <a href="https://developer.atlassian.com/cloud/jira/platform/rest/v2/intro/#expansion">expand</a> to include additional
+								information in the response. This parameter accepts <code>transition</code>, which, for each rule, returns information about
+							the transition the rule is assigned to.</p>
 						</div>
 					</div>
 				</section>
@@ -117,7 +136,7 @@
 					<div class="tsd-signature tsd-kind-icon">keys<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/92c15ecf/src/version2/parameters/getWorkflowTransitionRuleConfigurations.ts#L9">version2/parameters/getWorkflowTransitionRuleConfigurations.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/29c7b3f7/src/version2/parameters/getWorkflowTransitionRuleConfigurations.ts#L9">version2/parameters/getWorkflowTransitionRuleConfigurations.ts:9</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -132,7 +151,7 @@
 					<div class="tsd-signature tsd-kind-icon">max<wbr>Results<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/92c15ecf/src/version2/parameters/getWorkflowTransitionRuleConfigurations.ts#L5">version2/parameters/getWorkflowTransitionRuleConfigurations.ts:5</a></li>
+							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/29c7b3f7/src/version2/parameters/getWorkflowTransitionRuleConfigurations.ts#L5">version2/parameters/getWorkflowTransitionRuleConfigurations.ts:5</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -147,7 +166,7 @@
 					<div class="tsd-signature tsd-kind-icon">start<wbr>At<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/92c15ecf/src/version2/parameters/getWorkflowTransitionRuleConfigurations.ts#L3">version2/parameters/getWorkflowTransitionRuleConfigurations.ts:3</a></li>
+							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/29c7b3f7/src/version2/parameters/getWorkflowTransitionRuleConfigurations.ts#L3">version2/parameters/getWorkflowTransitionRuleConfigurations.ts:3</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -162,12 +181,42 @@
 					<div class="tsd-signature tsd-kind-icon">types<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/92c15ecf/src/version2/parameters/getWorkflowTransitionRuleConfigurations.ts#L7">version2/parameters/getWorkflowTransitionRuleConfigurations.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/29c7b3f7/src/version2/parameters/getWorkflowTransitionRuleConfigurations.ts#L7">version2/parameters/getWorkflowTransitionRuleConfigurations.ts:7</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The types of the transition rules to return.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="withTags" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> with<wbr>Tags</h3>
+					<div class="tsd-signature tsd-kind-icon">with<wbr>Tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/29c7b3f7/src/version2/parameters/getWorkflowTransitionRuleConfigurations.ts#L13">version2/parameters/getWorkflowTransitionRuleConfigurations.ts:13</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>EXPERIMENTAL: The list of <code>tags</code> to filter by.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="workflowNames" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> workflow<wbr>Names</h3>
+					<div class="tsd-signature tsd-kind-icon">workflow<wbr>Names<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/29c7b3f7/src/version2/parameters/getWorkflowTransitionRuleConfigurations.ts#L11">version2/parameters/getWorkflowTransitionRuleConfigurations.ts:11</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>EXPERIMENTAL: The list of workflow names to filter by.</p>
 						</div>
 					</div>
 				</section>
@@ -192,6 +241,9 @@
 						<a href="version2_parameters_getWorkflowTransitionRuleConfigurations.GetWorkflowTransitionRuleConfigurations.html" class="tsd-kind-icon">Get<wbr>Workflow<wbr>Transition<wbr>Rule<wbr>Configurations</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="version2_parameters_getWorkflowTransitionRuleConfigurations.GetWorkflowTransitionRuleConfigurations.html#draft" class="tsd-kind-icon">draft</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="version2_parameters_getWorkflowTransitionRuleConfigurations.GetWorkflowTransitionRuleConfigurations.html#expand" class="tsd-kind-icon">expand</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -205,6 +257,12 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="version2_parameters_getWorkflowTransitionRuleConfigurations.GetWorkflowTransitionRuleConfigurations.html#types" class="tsd-kind-icon">types</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="version2_parameters_getWorkflowTransitionRuleConfigurations.GetWorkflowTransitionRuleConfigurations.html#withTags" class="tsd-kind-icon">with<wbr>Tags</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="version2_parameters_getWorkflowTransitionRuleConfigurations.GetWorkflowTransitionRuleConfigurations.html#workflowNames" class="tsd-kind-icon">workflow<wbr>Names</a>
 							</li>
 						</ul>
 					</li>

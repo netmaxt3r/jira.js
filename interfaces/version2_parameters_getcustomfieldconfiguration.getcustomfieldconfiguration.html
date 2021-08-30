@@ -86,7 +86,9 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="version2_parameters_getCustomFieldConfiguration.GetCustomFieldConfiguration.html#contextId" class="tsd-kind-icon">context<wbr>Id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="version2_parameters_getCustomFieldConfiguration.GetCustomFieldConfiguration.html#fieldIdOrKey" class="tsd-kind-icon">field<wbr>IdOr<wbr>Key</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="version2_parameters_getCustomFieldConfiguration.GetCustomFieldConfiguration.html#issueId" class="tsd-kind-icon">issue<wbr>Id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="version2_parameters_getCustomFieldConfiguration.GetCustomFieldConfiguration.html#issueTypeId" class="tsd-kind-icon">issue<wbr>Type<wbr>Id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="version2_parameters_getCustomFieldConfiguration.GetCustomFieldConfiguration.html#maxResults" class="tsd-kind-icon">max<wbr>Results</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="version2_parameters_getCustomFieldConfiguration.GetCustomFieldConfiguration.html#projectKeyOrId" class="tsd-kind-icon">project<wbr>Key<wbr>OrId</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="version2_parameters_getCustomFieldConfiguration.GetCustomFieldConfiguration.html#startAt" class="tsd-kind-icon">start<wbr>At</a></li>
 							</ul>
 						</section>
@@ -101,13 +103,13 @@
 					<div class="tsd-signature tsd-kind-icon">context<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/92c15ecf/src/version2/parameters/getCustomFieldConfiguration.ts#L8">version2/parameters/getCustomFieldConfiguration.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/29c7b3f7/src/version2/parameters/getCustomFieldConfiguration.ts#L8">version2/parameters/getCustomFieldConfiguration.ts:8</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The list of context IDs. To include multiple contexts, separate IDs with an ampersand:
-							<code>contextId=10000&amp;contextId=10001</code>. Either this or <code>issueId</code> can be provided, but not both.</p>
+							<code>contextId=10000&amp;contextId=10001</code>. Can&#39;t be provided with <code>issueId</code>, <code>projectKeyOrId</code>, or <code>issueTypeId</code>.</p>
 						</div>
 					</div>
 				</section>
@@ -117,7 +119,7 @@
 					<div class="tsd-signature tsd-kind-icon">field<wbr>IdOr<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/92c15ecf/src/version2/parameters/getCustomFieldConfiguration.ts#L3">version2/parameters/getCustomFieldConfiguration.ts:3</a></li>
+							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/29c7b3f7/src/version2/parameters/getCustomFieldConfiguration.ts#L3">version2/parameters/getCustomFieldConfiguration.ts:3</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -132,13 +134,29 @@
 					<div class="tsd-signature tsd-kind-icon">issue<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/92c15ecf/src/version2/parameters/getCustomFieldConfiguration.ts#L13">version2/parameters/getCustomFieldConfiguration.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/29c7b3f7/src/version2/parameters/getCustomFieldConfiguration.ts#L13">version2/parameters/getCustomFieldConfiguration.ts:13</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The ID of the issue to filter results by. If the issue doesn&#39;t exist, an empty list is returned. Either this or
-							<code>contextIds</code> can be provided, but not both.</p>
+							<p>The ID of the issue to filter results by. If the issue doesn&#39;t exist, an empty list is returned. Can&#39;t be provided
+							with <code>contextIds</code>, <code>projectKeyOrId</code>, or <code>issueTypeId</code>.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="issueTypeId" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> issue<wbr>Type<wbr>Id</h3>
+					<div class="tsd-signature tsd-kind-icon">issue<wbr>Type<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/29c7b3f7/src/version2/parameters/getCustomFieldConfiguration.ts#L23">version2/parameters/getCustomFieldConfiguration.ts:23</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The ID of the issue type to filter results by. Must be provided with <code>projectKeyOrId</code>. Can&#39;t be provided with
+							<code>contextIds</code> or <code>issueId</code>.</p>
 						</div>
 					</div>
 				</section>
@@ -148,7 +166,7 @@
 					<div class="tsd-signature tsd-kind-icon">max<wbr>Results<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/92c15ecf/src/version2/parameters/getCustomFieldConfiguration.ts#L17">version2/parameters/getCustomFieldConfiguration.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/29c7b3f7/src/version2/parameters/getCustomFieldConfiguration.ts#L27">version2/parameters/getCustomFieldConfiguration.ts:27</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -158,12 +176,28 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="projectKeyOrId" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> project<wbr>Key<wbr>OrId</h3>
+					<div class="tsd-signature tsd-kind-icon">project<wbr>Key<wbr>OrId<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/29c7b3f7/src/version2/parameters/getCustomFieldConfiguration.ts#L18">version2/parameters/getCustomFieldConfiguration.ts:18</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The ID or key of the project to filter results by. Must be provided with <code>issueTypeId</code>. Can&#39;t be provided with
+							<code>contextIds</code> or <code>issueId</code>.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="startAt" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> start<wbr>At</h3>
 					<div class="tsd-signature tsd-kind-icon">start<wbr>At<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/92c15ecf/src/version2/parameters/getCustomFieldConfiguration.ts#L15">version2/parameters/getCustomFieldConfiguration.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/MrRefactoring/jira.js/blob/29c7b3f7/src/version2/parameters/getCustomFieldConfiguration.ts#L25">version2/parameters/getCustomFieldConfiguration.ts:25</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -202,7 +236,13 @@
 								<a href="version2_parameters_getCustomFieldConfiguration.GetCustomFieldConfiguration.html#issueId" class="tsd-kind-icon">issue<wbr>Id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="version2_parameters_getCustomFieldConfiguration.GetCustomFieldConfiguration.html#issueTypeId" class="tsd-kind-icon">issue<wbr>Type<wbr>Id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="version2_parameters_getCustomFieldConfiguration.GetCustomFieldConfiguration.html#maxResults" class="tsd-kind-icon">max<wbr>Results</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="version2_parameters_getCustomFieldConfiguration.GetCustomFieldConfiguration.html#projectKeyOrId" class="tsd-kind-icon">project<wbr>Key<wbr>OrId</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="version2_parameters_getCustomFieldConfiguration.GetCustomFieldConfiguration.html#startAt" class="tsd-kind-icon">start<wbr>At</a>
