@@ -4,6 +4,7 @@ node_modules/
 out/
 docs/
 coverage/
+browser/
 
 yarn.lock
 yarn-error.log
